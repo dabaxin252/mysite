@@ -1,0 +1,275 @@
+@charset "UTF-8";
+/*common*/
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.7;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+p{
+    font-family: 'Noto Sans', 'Noto Sans JP';
+}
+
+/*header*/
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+}
+.logo{
+    width: 150px;
+    object-fit: cover;
+}
+.page-header{
+    padding: 20px 16px;
+    background-color: white;
+}
+.page-header a{
+    display: inline-block;
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.main-nav{
+    display: flex;
+    padding: 10px;
+    color: white;
+    align-items: center;
+}
+header nav{
+    background-color: rgba(40, 40, 40);
+}
+.main-nav li{
+    margin: 0 30px;
+    font-size: 0.85rem;
+}
+
+/*content*/
+.content{
+    margin-top: 40px;
+    padding-top: 115px;
+}
+.content img{
+    object-fit: cover;
+}
+.content ul{
+    display: flex;
+    justify-content: space-between;
+}
+.content li{
+    margin: 0 10px;
+    text-align: center;
+}
+.content p{
+    margin: 10px 0 15px 0;
+    font-weight: bold;
+    text-align: left;
+}
+.read-more{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    color: dimgrey;
+}
+.read-more::after{
+    position: absolute;
+    content: '';
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.read-more:hover::after{
+    bottom: -4px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*main contents*/
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+main{
+    width: 64%;
+}
+main ul{
+    display: flex;
+}
+main li{
+    margin-right: 10px;
+    font-size: 0.85rem;
+}
+main h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+main p{
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+}
+aside{
+    width: 33%;
+}
+.article{
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+/*aside author*/
+.aside-content{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.author-name{
+    margin-bottom: 20px;
+    margin-top: 24px;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+.author-picture{
+    border-radius: 50%;
+    width: 120px;
+    object-fit: cover;
+}
+.side-title{
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+.sentence{
+    font-size: 0.85rem;
+    text-align: left;
+    color: #333;
+}
+.ranking-picture{
+    object-fit: cover;
+    margin: 30px 0 5px;
+}
+.achieves{
+    margin-top: 30px;
+    border-top: 1px solid black;
+}
+.achieves li{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+/*footer*/
+footer{
+    margin-top: 60px;
+    background-color: beige;
+    padding-top: 50px ;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.about p{
+    margin-top: 30px;
+}
+.about ul{
+    margin-top: 30px;
+}
+.about li{
+    font-weight: bold;
+    padding: 2px 0;
+}
+.arrow{
+    position: relative;
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    color: #333;
+}
+.arrow::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 8px;
+    border-color: transparent transparent transparent #333;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
+}
+.item{
+    width: 30%;
+}
+.menu ul{
+    border-top: 1px black solid;
+    margin: 20px 0;
+}
+.menu li{
+    font-size: 0.875rem;
+    border-bottom: 1px black solid;
+    color: #333;
+    padding: 12px 20px;
+}
+small{
+    font-size: 0.75rem;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 50px;
+    display: block;
+    padding: 10px 0;
+}
+.twitter h4{
+    margin-bottom: 30px;
+}
+
+@media(max-width:760px){
+    /*header*/
+    .main-nav{
+        justify-content: space-between;
+    }
+    .main-nav li{
+        margin: 0 10px;
+    }
+    /*content*/
+    .content ul{
+        flex-direction: column;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+    article .read-more{
+        margin-bottom: 30px;
+    }
+    main{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .item{
+        width: 100%;
+    }
+}
