@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/*common*/
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.800);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+/*header*/
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.main-nav li{
+    margin-left: 40px;
+    font-size: 1.125rem;
+}
+
+.main-nav a:hover{
+    color: #c8c8c8;
+}
+
+.main-vision img{
+    height: 420px;
+    object-fit: cover;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+/*about*/
+.about{
+    margin-bottom: 150px;
+}
+.about li:first-child{
+    margin-bottom: 30px;
+}
+.about ul{
+    margin-bottom: 40px;
+    font-size: 0.85rem;
+}
+.about p{
+    text-align: justify;
+    font-size: 0.85rem;
+}
+
+/*Work*/
+.grid{
+    margin-top: 6%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.works{
+    margin-bottom: 150px;
+}
+
+/*News*/
+.news{
+    margin-bottom: 150px;
+}
+.news dl{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #c8c8c8;
+    vertical-align: middle;
+}
+.news dd{
+    width: 80%;
+    font-size: 0.85rem;
+    padding: 15px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.news dt{
+    width: 20%;
+    font-weight: normal;
+    font-size: 0.85rem;
+    padding: 15px;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+/*contact*/
+.contact{
+    margin-bottom: 150px;
+}
+form div{
+    margin-bottom: 16px;
+    display: flex;
+}
+form label{
+    font-size: 0.85rem;
+    width: 15%;
+    display: block;
+}
+input[type="text"], input[type="email"], textarea{
+    border: 1px #c8c8c8 solid;
+    display: block;
+}
+input[type="text"], input[type="email"]{
+    width: 85%;
+    height: 3rem;
+}
+textarea{
+    width: 85%;
+    height: 10rem;
+}
+input[type="submit"]
+{
+    display: block;
+}
+.button{
+    text-align: center;
+    font-size: 0.85rem;
+    margin: 30px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 80px;
+    border: 1px solid black;
+}
+.button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/*footer*/
+footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 8px 0;
+}
+footer p{
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px){
+    .page-header{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .title{
+        margin-bottom: 40px;
+    }
+    .main-nav{
+        margin-top: 20px;
+        justify-content: center;
+    }
+    .main-nav li{
+        font-size: 0.85rem;
+        margin-left: 20px;
+    }
+    .main-vision img{
+        object-fit: cover;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .mark{
+        margin-bottom: 90px;
+    }
+    .news dl{
+        flex-direction: column;
+    }
+    .news dd{
+        width: 100%;
+        padding: 0 15px 15px;
+    }
+    .news dt{
+        width: 100%;
+        border: none;
+        padding: 15px 15px 0;
+    }
+    form div{
+        flex-direction: column;
+    }
+    input[type="text"], input[type="email"], textarea{
+        width: 100%;
+    }
+}
